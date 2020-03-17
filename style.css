@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+    background-color: black; 
+}
+
+nav{
+    width: 100vw;
+    height: 10vh;
+    background-color: tomato; /* A supprimer lors de la mise en forme */
+    position: fixed;
+    z-index: 1;
+}
+
+#homepage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#togglebutton{
+    width: 5vw;
+    height: 30vh;
+    position: fixed;
+    right: 0;
+    bottom: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#agence{
+    width: 65vw;
+    height: 85vh; /* Mettre "auto" lorsque nous mettrons le texte*/
+    background-color: red;
+    padding-top: 15vh;
+}
+#concept{
+    width: 65vw;
+    height: 85vh; /* Mettre "auto" lorsque nous mettrons le texte*/
+    background-color: rgb(181, 201, 0);
+    padding-top: 15vh;
+}
+
+#team{
+    width: 55vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5%;
+    /* A mettre pour voir la zone "Team" */
+    /* background-color: pink; */
+}
+
+footer{
+    width: 65vw;
+    height: 10vh;
+    background-color: pink; /* A supprimer lors de la mise en forme */
+}
+
+
+/* Pour créer des box de même taille */
+.box{
+    width: 50%;
+    display: block;
+}
+
+.texte{
+    background-color: white; /* A supprimer lors de la mise en forme */
+    color: black;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+
+/* Pour définir le padding de la zone "description" */ 
+.texte p{
+    padding: 10%;;
+}
+
+
+/* Pour mettre en forme et positionner le texte d'accroche */
+h2{
+    font-size: 5em;    
+    margin-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+/* Pour créer et positionner la flèche du "scroll down" */
+#ArrowBottom{
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    position: absolute; 
+    left: 50%;
+    bottom: 10%;
+}
+
+
+/* Pour changer un bouton Checkbox en toggle button */
+input[type="checkbox"]{
+    position: relative;
+    width: 20px;
+    height: 40px;
+    -webkit-appearance: none;
+    background: white;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+input:checked[type="checkbox"]{
+    background: black;
+}
+
+input[type="checkbox"]:before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    background: grey;
+    transform: scale(0.7);
+    transition: 0.5s;
+}
+
+input:checked[type="checkbox"]:before{
+    top:20px;
+}
+
+
+/* Pour changer la forme d'un bouton */
+.boutoncouleur{
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Pour changer la couleur des boutons */
+#bluebutton:hover{
+    background-color: #28FFFB;
+}
+
+#greenbutton:hover{
+    background-color: #00FF0C;
+}
+
+#pinkbutton:hover{
+    background-color: #FB28FF;
+}
+
+#yellowbutton:hover{
+    background-color: #FFFB28;
+}
+
+
+/* STYLE DU FORMULAIRE */
+#formulaire{
+    width: 25vw;
+    height: 85vh;
+    position: sticky;
+    top: 10vh;
+    padding: 2.5%;
+    padding-bottom: 0;
+}
+
+form{
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input{
+    width : 90%;
+    height: 7.5%;
+    margin: 0;
+    outline: none;
+    border: none;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box; 
+            box-sizing: border-box;
+    padding-left: 2%;
+    z-index: 1;
+  }
+
+textarea{
+    width: 90%;
+    height: 20%;
+    -webkit-box-sizing: border-box; 
+       -moz-box-sizing: border-box; 
+            box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    border: none;
+    resize: none;
+    padding-top: 5%;
+    padding-left: 2%;
+    z-index: 1;
+  }
+
+button{
+    width : 50%;
+    height: 5vh;
+    margin: 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Barre de décoration du formulaire */
+  #barre{
+      height: 90%;
+      width: 15%;
+      background-color: #00FF0C;
+      position: absolute;
+      float: right;
+      flex: none;
+      right: 10%;
+  }
+
+  #typed{
+      color: #00FF0C;
+  }

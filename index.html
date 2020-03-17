@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script>  
+        /* Fonction pour changer la couleur des éléments */
+        function changeColor(color) { 
+            /* Utiliser une class "color" pour modifier plusieurs éléments d'un coup */
+            document.getElementById('typed').style.color= color; 
+        }
+
+        /* Pas bon mais c'est une piste pour le ToggleButton */
+        /* 
+        function changeBodyColor(bodycolor) { 
+            document.body.style.backgroundColor= bodycolor; 
+        }
+        */
+    </script>
+</head>
+
+<body>
+    <!-- SECTION "BARRE DE NAVIGATION" -->
+    <nav>
+    </nav>
+
+    <!-- SECTION "PAGE D'ACCUEIL" -->
+    <section id="homepage">
+        <h2>Pas de superflu... <br /> juste <span id="typed"></span></h2>
+        <a href="#agence" >
+            <div id="ArrowBottom"></div>
+        </a>
+    </section>
+
+    <!-- SECTION "TOGGLE BUTTON" -->
+    <section id="togglebutton">
+        <!-- Pas bon mais c'est une piste pour le Toggle Button -->
+        <input type="checkbox" onclick = "changeBodyColor('white');">
+        <!-- Boutons pour changer la couleur -->
+        <button class="boutoncouleur" id="bluebutton" onclick = "changeColor('#28FFFB');"></button>
+        <button class="boutoncouleur" id="greenbutton" onclick = "changeColor('#00FF0C');"></button> 
+        <button class="boutoncouleur" id="pinkbutton" onclick = "changeColor('#FB28FF');"></button>
+        <button class="boutoncouleur" id="yellowbutton" onclick = "changeColor('yellow');"></button> 
+    </section>
+
+    <!-- SECTION "L'AGENCE" -->
+    <section id="agence">
+        <p>Agence</p>
+    </section>
+
+    <!-- SECTION FORMULAIRE -->
+    <aside id="formulaire">
+
+        <form action="">
+            <h3>Nous contacter ?</h3>
+
+            <input type="text" id="name" name="user_name" placeholder="Prénom" required>
+          
+            <input type="email" id="mail" name="user_email" placeholder="Email" required>
+   
+            <input type="text" id="subject" name="user_subject" placeholder="De quoi voulez parler ?" required>
+
+            <textarea id="msg" name="user_message" placeholder="Votre demande" required></textarea>
+           
+            <div class="button">
+              <button type="submit">Envoyer</button>
+            </div>
+
+            <div id="barre"></div>
+        </form>
+        
+    </aside>
+
+    <!-- SECTION "LE CONCEPT" -->
+    <section id="concept">
+        <p>Concept</p>
+    </section>
+
+    <!-- SECTION "L'ÉQUIPE" -->
+    <section id="team">
+        <div class="box">
+            <img src="carré.png" alt="">
+        </div>
+        <div class="box texte">
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+        </div>
+        <div class="box texte">
+            <p>Description</p>
+        </div>
+        <div class="box">
+            <img src="carré.png" alt="">
+        </div>
+        <div class="box">
+            <img src="carré.png" alt="">
+        </div>
+        <div class="box texte">
+            <p>Description</p>
+        </div>
+        <div class="box texte">
+            <p>Description</p>
+        </div>
+        <div class="box">
+            <img src="carré.png" alt="">
+        </div>
+    </section>
+
+    <!-- SECTION "FOOTER" -->
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+    <!-- ANIMATION DU TEXTE "D'ACCUEIL" -->
+    <script>
+    var typed = new Typed('#typed', {
+        strings: ["le contenu.", "l'essentiel.", "le style bro'."],
+        typeSpeed : 50,
+        backSpeed : 50,
+        loop: true,
+        showCursor: true
+    })
+    </script>
+</body>
+</html>
