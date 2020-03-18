@@ -30,14 +30,14 @@
         </section>
         <nav>
             <ul>
-                <li><a href="#agence">Agence</a></li>
-                <li><a href="#concept">Concept</a></li>
-                <li><a href="#team">Equipe</a></li>
-                <li><a href="#reseaux">Réseaux</a>
+                <li><a href="#agence">L'agence</a></li>
+                <li><a href="#concept">Le concept</a></li>
+                <li><a href="#team">L'équipe</a></li>
+                <li><a href="#reseaux">Nos réseaux</a>
                     <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">Github</a></li>
+                        <li><a href="https://www.facebook.com/"  target="_blank">Facebook</a></li>
+                        <li><a href="http://linkedin.com/"" target="_blank">Linkedin</a></li>
+                        <li><a href="https://github.com/"" target="_blank">Github</a></li>
                     </ul>
                 </li>
             </ul>
@@ -74,7 +74,7 @@
     <aside id="formulaire">
 
         <form action="">
-            <h3>Nous contacter ?</h3>
+            <h3>Nous contacter</h3>
 
             <input type="text" id="name" name="user_name" placeholder="Prénom" required>
           
@@ -101,7 +101,11 @@
     </section>
 
     <!-- SECTION "L'ÉQUIPE" -->
-    <section id="team">        
+    <section id="team">    
+        <div id="header-team">
+            <h3>L'équipe</h3>
+        </div>
+        
         <div class="box">
             <img src="carré.png" alt="">
         </div>
@@ -116,8 +120,9 @@
                     <h5>Chief Engineer</h5>
                 </div>
             </div>
-
+            <div class="texte_team">
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+            </div>
         </div>
 
 
@@ -126,7 +131,7 @@
                 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
             </div>
             <div class="box_header">
-                <div class="membre">
+                <div class="membre membre-left">
                     <h4>Sylvie Lu</h4>
                     <h5>Chief Engineer</h5>
                 </div>
@@ -157,14 +162,16 @@
                     <h5>Chief Engineer</h5>
                 </div>
             </div>
+            <div class="texte_team">
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+            </div>
         </div>
         <div class="box texte">
             <div class="texte_team">
                 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
             </div>
             <div class="box_header">
-                <div class="membre">
+                <div class="membre membre-left">
                     <h4>Sylvie Lu</h4>
                     <h5>Chief Engineer</h5>
                 </div>
@@ -196,7 +203,7 @@
     <!-- ANIMATION DU TEXTE "D'ACCUEIL" -->
     <script>
     var typed = new Typed('#typed', {
-        strings: ["le contenu.", "l'essentiel.", "le style bro'."],
+        strings: ["le contenu.", "l'essentiel.", "le style bro'.", "git push"],
         typeSpeed : 50,
         backSpeed : 50,
         loop: true,
