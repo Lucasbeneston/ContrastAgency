@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +9,8 @@
     <script>  
         /* Fonction pour changer la couleur des éléments */
         function changeColor(color) { 
-            /* Utiliser une class "color" pour modifier plusieurs éléments d'un coup */
             document.getElementById('typed').style.color= color; 
         }
-
-        /* Pas bon mais c'est une piste pour le ToggleButton */
-        /* 
-        function changeBodyColor(bodycolor) { 
-            document.body.style.backgroundColor= bodycolor; 
-        }
-        */
     </script>
 </head>
 
@@ -54,13 +46,16 @@
 
     <!-- SECTION "TOGGLE BUTTON" -->
     <section id="togglebutton">
-        <!-- Pas bon mais c'est une piste pour le Toggle Button -->
-        <input type="checkbox" onclick = "changeBodyColor('white');">
+
+        <!-- Toggle Button -->
+        <input type="checkbox" id="switch" name="theme"/>
+        <label for="switch"></label>
+
         <!-- Boutons pour changer la couleur -->
-        <button class="boutoncouleur" id="bluebutton" onclick = "changeColor('#28FFFB');"></button>
         <button class="boutoncouleur" id="greenbutton" onclick = "changeColor('#00FF0C');"></button> 
         <button class="boutoncouleur" id="pinkbutton" onclick = "changeColor('#FB28FF');"></button>
         <button class="boutoncouleur" id="yellowbutton" onclick = "changeColor('yellow');"></button> 
+        <button class="boutoncouleur" id="bluebutton" onclick = "changeColor('#28FFFB');"></button>
     </section>
 
     <!-- SECTION "L'AGENCE" -->
@@ -200,6 +195,9 @@
         </div>
     </footer>
 
+    <!-- SWITCH MODE DARK & LIGHT -->
+    <script src="toggle.js"></script>
+    
     <!-- ANIMATION DU TEXTE "D'ACCUEIL" -->
     <script>
     var typed = new Typed('#typed', {
