@@ -74,6 +74,7 @@ nav {
     align-items: center;
     justify-content: flex-end;
     z-index: 1;
+    font-weight: bold;
 }
 
 nav ul {
@@ -81,11 +82,6 @@ nav ul {
     width: auto;
     display: flex;
 }
-
-nav ul :hover{
-    color: #25FD02;
-}
-
 nav ul:After {
     content: "";
     display: block;
@@ -99,11 +95,14 @@ nav ul li {
     margin-left: 3vw;
 }
 
+nav ul li :hover{
+    color: #25FD02;
+}
+
 
 nav ul li a {
     display: block;
     padding: 15px 0px;  
-    color: var(--linkColor);
     font-size: 1em;
     text-decoration: none;
     text-align: left;
@@ -134,8 +133,8 @@ nav ul ul li {
     
 nav ul ul li a {
     padding: 10px 0px;
-    color: var(--linkColor); /* PEUT-ÊTRE INUTIL ? */
 }
+    
 /* Fin Dropdown */
 
 
@@ -149,6 +148,15 @@ h2{
 h3{
     font-size: 1.25em;
     margin-top: 7.5%;
+}
+
+h4{
+    font-size: 1.25em;
+}
+
+h5{
+    font-size: 0.75em;
+    font-weight: lighter;
 }
 
 section h3{
@@ -246,10 +254,11 @@ img{
 .texte_team{
     height: 80%;
     display: flex;
-    font-size: 1em;
     flex-direction: column; /* direction d'affichage verticale */
     justify-content: center; /* alignement vertical */
 }
+
+
 
 .box_header{
     display: flex;
@@ -331,7 +340,7 @@ label:after {
     left: 0;
 	width: 20px;
 	height: 20px;
-	background: grey;
+	background: var(--bg);
 	border-radius: 90px;
     transition: 0.3s;
     transform: scale(0.7);
@@ -410,6 +419,7 @@ input{
     padding-left: 2%;
     z-index: 2;
     background-color: var(--reverse-bg);
+    color: var(--reverse-color-text);
   }
 
 textarea{
@@ -426,6 +436,7 @@ textarea{
     padding-left: 2%;
     z-index: 2;
     background-color: var(--reverse-bg);
+    color: var(--reverse-color-text);
   }
 
 button{
