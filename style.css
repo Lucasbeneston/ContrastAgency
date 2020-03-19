@@ -151,11 +151,11 @@ h3{
 }
 
 h4{
-    font-size: 1.25em;
+    font-size: 1.30em;
 }
 
 h5{
-    font-size: 0.75em;
+    font-size: 0.85em;
     font-weight: lighter;
 }
 
@@ -258,7 +258,11 @@ img{
     justify-content: center; /* alignement vertical */
 }
 
-
+.box-reverse{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 .box_header{
     display: flex;
@@ -305,11 +309,16 @@ img{
     transform: rotate(45deg);
     border-left: none;
     border-top: none;
-    border-right: 2px var(--border-right-color) solid;
-    border-bottom: 2px var(--border-bottom-color) solid;
+    border-right: 1px var(--border-right-color) solid;
+    border-bottom: 1px var(--border-bottom-color) solid;
     position: absolute; 
     left: 50%;
     bottom: 10%;
+}
+
+#ArrowBottom:hover{
+    border-right: 3px var(--border-right-color) solid;
+    border-bottom: 3px var(--border-bottom-color) solid;
 }
 
 
@@ -466,6 +475,7 @@ textarea::placeholder, input::placeholder {
     right: 10%;
 }
 
+/* Pour changer la couleur de l'effet "typed" */
 #typed{
     color: #00FF0C;
 }
@@ -532,12 +542,40 @@ footer h6 {
 
 }
 
+
+/**** PARTIE RESPONSIVE ****/
+
+/* SMARTPHONES */
 @media screen and (max-width: 768px){
     #agence, #concept, #team, #formulaire{
         width: 95vw;
     }
 
+    .box{
+        width: 100%;
+    }
+
+    .texte{
+        height: 60vh;
+    }
+    
+    .texte_team{
+        height: 45vh;
+    }
+    
+    .box_header{
+        height: 15vh;
+    }
+
+    #team p{
+        font-size: 1.5em;
+    }
+
+    .box-reverse{
+        flex-direction: column-reverse;
+    }
+
     #formulaire{
-display: none;
+        display: none;
     }
 }
