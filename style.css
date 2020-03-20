@@ -4,31 +4,13 @@
 }
 
 html {
-    --bg: black;
-    --reverse-bg: #fcfcfc;
-    --color-text: #FCFCFC;
-    --reverse-color-text: black;
-    --color-headings: #fcfcfc;
-    --link-color: #FCFCFC;
-    --color-footer: #FCFCFC;
-    --border-left-color: #FCFCFC;
-    --border-top-color: #FCFCFC;
-    --border-right-color: #FCFCFC;
-    --border-bottom-color: #FCFCFC;
+    --color-black-white: black;
+    --color-white-black: #FCFCFC;
 }
 
 html[data-theme='light'] {
-    --bg: #FCFCFC;
-    --reverse-bg: black;
-    --color-text: black;
-    --reverse-color-text: #FCFCFC;
-    --color-headings: black;
-    --linkColor: black;
-    --color-footer: black;
-    --border-left-color: black;
-    --border-top-color: black;
-    --border-right-color: black;
-    --border-bottom-color: black;
+    --color-black-white: #FCFCFC;
+    --color-white-black: black;
 }
 
 body{
@@ -36,8 +18,8 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: var(--bg);
-    color: var(--color-text);
+    background-color: var(--color-black-white);
+    color: var(--color-white-black);
     -webkit-box-sizing: border-box; 
     -moz-box-sizing: border-box; 
 }
@@ -47,8 +29,8 @@ header{
     width: 100vw;
     height: 10vh;
     position: fixed;
-    background-color: var(--bg);
-    color: var(--color-text);
+    background-color: var(--color-black-white);
+    color: var(--color-white-black);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -63,7 +45,46 @@ header{
 
 h1 {
     font-size: 2em;
-    width: auto;
+}
+
+h2{
+    font-size: 5em;    
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+h3{
+    font-size: 1.25em;
+    margin-top: 7.5%;
+}
+
+h4{
+    font-size: 1.20em;
+}
+
+h5{
+    font-size: 0.85em;
+    font-weight: lighter;
+}
+
+section h3{
+    font-size: 2em;
+    border-bottom: 15px solid #25FD02; 
+    width: 50%;
+    padding-bottom: 20px;
+    margin-bottom: 5%;
+}
+
+p{
+    font-size: 1em;
+    line-height: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-white-black);
 }
 
 nav {
@@ -125,7 +146,7 @@ nav ul ul li {
     width: auto;
     float: none;
     position: relative;
-    background-color: var(--bg);
+    background-color: var(--color-black-white);
     padding: 0px 15px;
     margin: 0px -15px;
     font-size: 0.75em;
@@ -136,45 +157,6 @@ nav ul ul li a {
 }
     
 /* Fin Dropdown */
-
-
-h2{
-    font-size: 5em;    
-    margin-left: 5%;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-h3{
-    font-size: 1.25em;
-    margin-top: 7.5%;
-}
-
-h4{
-    font-size: 1.30em;
-}
-
-h5{
-    font-size: 0.85em;
-    font-weight: lighter;
-}
-
-section h3{
-    font-size: 2em;
-    border-bottom: 15px solid #25FD02; 
-    width: 50%;
-    padding-bottom: 20px;
-    margin-bottom: 5%;
-}
-
-p{
-    font-size: 1em;
-    line-height: 2em;
-}
-
-a{
-    text-decoration: none;
-    color: var(--color-text);}
 
 #homepage{
     width: 100vw;
@@ -236,8 +218,8 @@ width: 100%;
 }
 
 .texte{
-    background-color: var(--reverse-bg);
-    color: var(--reverse-color-text);
+    background-color: var(--color-white-black);
+    color: var(--color-black-white);
 }
 
 img{
@@ -269,8 +251,8 @@ img{
     flex-direction: row;
     flex-wrap: wrap;
     height: 20%;
-    background-color: var(--bg);
-    color: var(--color-text);}
+    background-color: var(--color-black-white);
+    color: var(--color-white-black);}
 
 .linkedinbox{
     width: 20%;
@@ -309,16 +291,16 @@ img{
     transform: rotate(45deg);
     border-left: none;
     border-top: none;
-    border-right: 1px var(--border-right-color) solid;
-    border-bottom: 1px var(--border-bottom-color) solid;
+    border-right: 1px var(--color-white-black) solid;
+    border-bottom: 1px var(--color-white-black) solid;
     position: absolute; 
     left: 50%;
     bottom: 10%;
 }
 
 #ArrowBottom:hover{
-    border-right: 3px var(--border-right-color) solid;
-    border-bottom: 3px var(--border-bottom-color) solid;
+    border-right: 3px var(--color-white-black) solid;
+    border-bottom: 3px var(--color-white-black) solid;
 }
 
 
@@ -349,14 +331,14 @@ label:after {
     left: 0;
 	width: 20px;
 	height: 20px;
-	background: var(--bg);
+	background: var(--color-black-white);
 	border-radius: 90px;
     transition: 0.3s;
     transform: scale(0.7);
 }
 
 input:checked + label {
-    background: var(--color-headings);
+    background: var(--color-white-black);
 }
 
 input:checked + label:after {
@@ -378,7 +360,7 @@ label:active:after {
     border: none;
     cursor: pointer;
     outline: none;
-    background-color: var(--reverse-bg);
+    background-color: var(--color-white-black);
 }
 
 /* Pour changer la couleur des boutons */
@@ -427,8 +409,8 @@ input{
             box-sizing: border-box;
     padding-left: 2%;
     z-index: 2;
-    background-color: var(--reverse-bg);
-    color: var(--reverse-color-text);
+    background-color: var(--color-white-black);
+    color: var(--color-black-white);
   }
 
 textarea{
@@ -444,8 +426,8 @@ textarea{
     padding-top: 5%;
     padding-left: 2%;
     z-index: 2;
-    background-color: var(--reverse-bg);
-    color: var(--reverse-color-text);
+    background-color: var(--color-white-black);
+    color: var(--color-black-white);
   }
 
 button{
@@ -456,12 +438,12 @@ button{
     border: none;
     cursor: pointer;
     margin-bottom: 7.5%;
-    background-color: var(--reverse-bg);
-    color: var(--reverse-color-text);
+    background-color: var(--color-white-black);
+    color: var(--color-black-white);
   }
 
 textarea::placeholder, input::placeholder {
-    color: var(--reverse-color-text)
+    color: var(--color-black-white)
 }
 
 /* Barre de décoration du formulaire */
@@ -480,9 +462,6 @@ textarea::placeholder, input::placeholder {
     color: #00FF0C;
 }
 
-
-
-
 footer{
     width: 65vw;
     height: 15vh;
@@ -496,7 +475,6 @@ footer p{
 }
 
 footer h6 {
-    width: 50%;
     font-size: 1em;
     text-align: center;
 }
@@ -523,9 +501,9 @@ footer h6 {
     height: 20px;
     -webkit-transform: rotate(45deg);
     border-left: 2px solid;
-    color: var(--border-left-color);
+    color: var(--color-white-black);
     border-top: 2px solid;
-    color: var(--border-top-color);
+    color: var(--color-white-black);
     border-right: none;
     border-bottom: none;
     opacity: 100%;
@@ -544,38 +522,26 @@ footer h6 {
 
 
 /**** PARTIE RESPONSIVE ****/
-
 /* SMARTPHONES */
 @media screen and (max-width: 768px){
-    #agence, #concept, #team, #formulaire{
-        width: 95vw;
-    }
-
-    .box{
-        width: 100%;
-    }
-
-    .texte{
-        height: 60vh;
-    }
-    
-    .texte_team{
-        height: 45vh;
-    }
-    
-    .box_header{
-        height: 15vh;
-    }
-
-    #team p{
-        font-size: 1.5em;
-    }
-
-    .box-reverse{
-        flex-direction: column-reverse;
-    }
-
-    #formulaire{
+    #agence, #concept, #team, #formulaire {width: 100vw; height: auto;}
+    footer {width: 100vw;}
+    #texte_footer_left {width: 37.5%; padding-left: 5%;}
+    #ArrowBox {height: 100%; width: 15%;}
+    #texte_footer_right {width: 42.5%;}
+    h2 {font-size: 3em;}
+    section h3 {width: 100%; margin-top: 10vh;}
+    .box{width: 100%;}
+    .texte{height: 60vh;}
+    .texte_team{height: 45vh;}
+    .box_header{height: 15vh;}
+    .box-reverse{flex-direction: column-reverse;}
+    /* TOGGLE BUTTON */
+    #togglebutton{width: 100vw; height: 10vh; top: 0; flex-direction: row; z-index: 1;}
+    label {width: 40px; height: 20px;}
+    input:checked + label:after {top: 0; left: 20px;}
+    /* PROVISOIRE, LE TEMPS DE TROUVER UN PLACE */
+    #formulaire, nav, .boutoncouleur{
         display: none;
     }
 }
