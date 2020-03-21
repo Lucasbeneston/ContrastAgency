@@ -598,9 +598,9 @@ footer h6 {
 /**** PARTIE RESPONSIVE ****/
 /* SMARTPHONES */
 @media screen and (max-width: 768px){
-    #agence, #concept, #team, #formulaire {width: 100vw; height: auto;}
+    #agence, #concept, #team, #formulaire {width: 100vw; height: auto; order:1;}
     header{z-index: 2;}
-    footer {width: 100vw;}
+    footer {width: 100vw; order: 3; margin-top: 10vh;}
     #texte_footer_left {width: 37.5%; padding-left: 5%;}
     #ArrowBox {height: 100%; width: 15%;}
     #texte_footer_right {width: 42.5%;}
@@ -624,7 +624,7 @@ footer h6 {
     /* PROVISOIRE, LE TEMPS DE TROUVER UN PLACE AU FORMULAIRE */
     .boutoncouleur, #barre{display: none;}
     /* FORMULAIRE */
-    #formulaire{height: 100vh; padding-left: 5%; padding-right: 5%; padding-bottom: 0%; position: relative;}
+    #formulaire{height: 100vh; padding-left: 5%; padding-right: 5%; padding-bottom: 0%; position: relative; order: 2;}
     input, textarea{width : 100%; z-index: 1;}
     h3{font-size: 2em; border-bottom: 15px solid #25FD02; width: 100%; margin-top: 10vh; padding-bottom: 20px; margin-bottom: 5%;}
 }
