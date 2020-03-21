@@ -20,8 +20,8 @@ body{
     flex-wrap: wrap;
     background-color: var(--color-black-white);
     color: var(--color-white-black);
-    -webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+    overflow-x: hidden;
 }
 
 /* Pour mettre en forme et positionner le texte d'accroche */
@@ -141,6 +141,7 @@ nav ul ul {
 nav ul li:hover > ul {
     display: list-item;
 }
+
 /* Dropdown */
 nav ul ul li {
     width: auto;
@@ -155,8 +156,77 @@ nav ul ul li {
 nav ul ul li a {
     padding: 10px 0px;
 }
-    
 /* Fin Dropdown */
+
+
+/* A MODIFIER APRÈS */
+/* Burger Menu */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #25FD02;
+    margin: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: auto;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        background-color: var(--color-black-white);
+        border-bottom: 10px solid #25FD02;
+        padding-bottom: 5%;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.burgerShut .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burgerShut .line2 {
+    opacity: 0;
+}
+
+.burgerShut .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+/* Fin Burger Menu */
+
+
 
 #homepage{
     width: 100vw;
@@ -294,8 +364,8 @@ img{
     border-right: 1px var(--color-white-black) solid;
     border-bottom: 1px var(--color-white-black) solid;
     position: absolute; 
-    left: 50%;
-    bottom: 10%;
+    left: 46vw;
+    bottom: 10vh;
 }
 
 #ArrowBottom:hover{
@@ -499,7 +569,7 @@ footer h6 {
 #ArrowTop {
     width: 20px;
     height: 20px;
-    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     border-left: 2px solid;
     color: var(--color-white-black);
     border-top: 2px solid;
@@ -537,11 +607,12 @@ footer h6 {
     .box_header{height: 15vh;}
     .box-reverse{flex-direction: column-reverse;}
     /* TOGGLE BUTTON */
-    #togglebutton{width: 100vw; height: 10vh; top: 0; flex-direction: row; z-index: 1;}
+    #togglebutton{width: 15vw; height: 10vh; right: 25vw; top: 0; flex-direction: row; z-index: 1;}
     label {width: 40px; height: 20px;}
     input:checked + label:after {top: 0; left: 20px;}
-    /* PROVISOIRE, LE TEMPS DE TROUVER UN PLACE */
-    #formulaire, nav, .boutoncouleur{
-        display: none;
-    }
+    /* DROP DOWN RESEAUX */
+    nav ul ul {position: relative;}  
+    nav ul ul li {position: relative; display: flex; flex-direction: column; align-items: center; font-weight: normal;}
+    /* PROVISOIRE, LE TEMPS DE TROUVER UN PLACE AU FORMULAIRE */
+    #formulaire, .boutoncouleur{display: none;}
 }
