@@ -98,6 +98,10 @@ nav {
     font-weight: bold;
 }
 
+#add-formulaire{
+    display: none;
+}
+
 nav ul {
     list-style: none;
     width: auto;
@@ -595,24 +599,32 @@ footer h6 {
 /* SMARTPHONES */
 @media screen and (max-width: 768px){
     #agence, #concept, #team, #formulaire {width: 100vw; height: auto;}
+    header{z-index: 2;}
     footer {width: 100vw;}
     #texte_footer_left {width: 37.5%; padding-left: 5%;}
     #ArrowBox {height: 100%; width: 15%;}
     #texte_footer_right {width: 42.5%;}
     h2 {font-size: 3em;}
     section h3 {width: 100%; margin-top: 10vh;}
+    /* SECTION "L'ÉQUIPE" */
     .box{width: 100%;}
     .texte{height: 60vh;}
     .texte_team{height: 45vh;}
     .box_header{height: 15vh;}
-    .box-reverse{flex-direction: column-reverse;}
+    .box-reverse{flex-direction: column-reverse;} /* Inverse le texte et la photo des box */
     /* TOGGLE BUTTON */
-    #togglebutton{width: 15vw; height: 10vh; right: 25vw; top: 0; flex-direction: row; z-index: 1;}
+    #togglebutton{width: 15vw; height: 10vh; right: 25vw; top: 0; flex-direction: row; z-index: 3;}
     label {width: 40px; height: 20px;}
     input:checked + label:after {top: 0; left: 20px;}
+    /* AFFICHER UN LIEN SUPPLÉMENTAIRE DANS LA NAV */
+    #add-formulaire{display: inherit;}
     /* DROP DOWN RESEAUX */
     nav ul ul {position: relative;}  
     nav ul ul li {position: relative; display: flex; flex-direction: column; align-items: center; font-weight: normal;}
     /* PROVISOIRE, LE TEMPS DE TROUVER UN PLACE AU FORMULAIRE */
-    #formulaire, .boutoncouleur{display: none;}
+    .boutoncouleur, #barre{display: none;}
+    /* FORMULAIRE */
+    #formulaire{height: 100vh; padding-left: 5%; padding-right: 5%; padding-bottom: 0%; position: relative;}
+    input, textarea{width : 100%; z-index: 1;}
+    h3{font-size: 2em; border-bottom: 15px solid #25FD02; width: 100%; margin-top: 10vh; padding-bottom: 20px; margin-bottom: 5%;}
 }
