@@ -2,7 +2,6 @@
 *{
     margin: 0;
     padding: 0;
-    
 }
 
 /*** PARTIE SWITCH DU THÈME + VARIABLES DES COULEURS ***/
@@ -257,7 +256,10 @@ nav ul ul li a {
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 768px)
+  and (-webkit-min-device-pixel-ratio: 2) {
     .nav-links {
         position: absolute;
         right: 0px;
@@ -641,10 +643,8 @@ footer h6 {
 
 /**** PARTIE RESPONSIVE ****/
 /* SMARTPHONES */
-@media only screen 
-  and (min-width: 320px) 
-  and (max-width: 768px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+@media screen  
+  and (max-width: 768px) {
     #agence, #concept, #team, #formulaire {width: 100vw; height: auto; order:1;}
     header{z-index: 2;}
     footer {width: 100vw; order: 3; margin-top: 10vh;}
@@ -668,7 +668,7 @@ footer h6 {
     /* DROP DOWN RESEAUX */
     nav ul ul {position: relative;}  
     nav ul ul li {position: relative; display: flex; flex-direction: column; align-items: center; font-weight: normal;}
-    /* PROVISOIRE, LE TEMPS DE TROUVER UN PLACE AU FORMULAIRE */
+    /* FAIRE */
     .boutoncouleur, #barre{display: none;}
     /* FORMULAIRE */
     #formulaire{height: 100vh; padding-left: 5%; padding-right: 5%; padding-bottom: 0%; position: relative; order: 2;}
