@@ -1,5 +1,15 @@
+// SCRIPT ANIMATION DU TEXTE <h1> 
+var typed = new Typed('#typed', {
+    strings: ["le contenu.", "l'essentiel.", "le style bro'.", "git push"],
+    typeSpeed : 50,
+    backSpeed : 50,
+    loop: true,
+    showCursor: true
+})
+// FIN SCRIPT ANIMATION DU TEXTE <h1> 
 
-// Script Toggle //
+
+// SCRIPT TOGGLE 
 const checkbox = document.querySelector('input[name=theme]');
 const currentTheme = localStorage.getItem('data-theme');
 
@@ -28,19 +38,20 @@ if (currentTheme) {
                 document.documentElement.classList.remove('transition')
             }, 1000)
         }
-// Fin Script Toggle //
+// FIN SCRIPT TOGGLE 
 
-// Script Burger //
+
+// SCRIPT BURGER 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
 
-    // Apparition menu //
+    // Apparition menu 
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
 
-        // Apparition liens //
+        // Apparition liens
         navLinks.forEach((link, index) => {
             if(link.style.animation) {
                 link.style.animation = '';
@@ -50,11 +61,10 @@ const navSlide = () => {
             
         });
 
-        // Animation burger menu //
+        // Animation burger menu
         burger.classList.toggle('burgerShut');
     });
 }
 
 navSlide();
-
-// Fin Script Burger //
+// FIN SCRIPT BURGER 

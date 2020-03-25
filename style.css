@@ -1,8 +1,11 @@
+/*** Désolé pour l'oublie de "box-sizing: border-box", la page fonctionne très bien sans, mais il faut du temps pour l'optimiser en l'ajoutant ici... ***/
 *{
     margin: 0;
     padding: 0;
+    
 }
 
+/*** PARTIE SWITCH DU THÈME + VARIABLES DES COULEURS ***/
 html {
     --color-black-white: black;
     --color-white-black: #FCFCFC;
@@ -12,7 +15,11 @@ html[data-theme='light'] {
     --color-black-white: #FCFCFC;
     --color-white-black: black;
 }
+/*** FIN PARTIE SWITCH DU THÈME + VARIABLES DES COULEURS ***/
 
+
+
+/*** PERMET DE DÉFINIR DES CARACTÉRISTIQUES GÉNÉRALES POUR LE BODY ***/
 body{
     font-family: Roboto, sans-serif;
     display: flex;
@@ -23,8 +30,11 @@ body{
     box-sizing: border-box; 
     overflow-x: hidden;
 }
+/*** FIN BODY ***/
 
-/* Pour mettre en forme et positionner le texte d'accroche */
+
+
+/*** MISE EN FORME DU ZONING DES DIFFÉRENTES PARTIES ***/
 header{
     width: 100vw;
     height: 10vh;
@@ -37,22 +47,79 @@ header{
     z-index: 1;
 }
 
-
-#logo{
-    width: 30vw;
-    padding-left: 5%;
+#homepage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
 }
 
+#togglebutton{
+    width: 5vw;
+    height: 30vh;
+    position: fixed;
+    right: 0;
+    bottom: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#agence{
+    width: 55vw;
+    height: 85vh;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#concept{
+    width: 55vw;
+    height: 85vh;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#team{
+    width: 55vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5%;
+    padding-top: 10%;
+}
+
+footer{
+    width: 65vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/*** FIN MISE EN FORME DU ZONING DES DIFFÉRENTES PARTIES ***/
+
+
+
+/*** MISE EN FORME DES DIFFÉRENTS TEXTES ***/
 h1 {
     font-size: 2em;
 }
 
+/* Pour mettre en forme et positionner le texte d'accroche */
 h2{
     font-size: 5em;    
     margin-left: 5%;
     margin-right: 5%;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+/* Pour changer la couleur de l'effet "typed" dans le <h2> */
+#typed{
+    color: #00FF0C;
 }
 
 h3{
@@ -86,7 +153,18 @@ a{
     text-decoration: none;
     color: var(--color-white-black);
 }
+/*** FIN MISE EN FORME DES DIFFÉRENTS TEXTES ***/
 
+
+
+/*** PARTIE MENU ***/ 
+/* Pour placer la zone logo à gauche du header */
+#logo{
+    width: 30vw;
+    padding-left: 5%;
+}
+
+/* Pour place la zone "nav" à droite du header */
 nav {
     width: 70vw; 
     padding-right: 5%;
@@ -98,6 +176,7 @@ nav {
     font-weight: bold;
 }
 
+/* Permet de rendre invisible le lien "Nous contacter" sur ordinateur, a afficher sur smartphone */
 #add-formulaire{
     display: none;
 }
@@ -134,7 +213,6 @@ nav ul li a {
 }
 
 /* Style Dropdown */
-/* =================== */
 /* Cacher Dropdown par Défaut */
 nav ul ul {
     display: none;
@@ -161,10 +239,11 @@ nav ul ul li a {
     padding: 10px 0px;
 }
 /* Fin Dropdown */
+/*** FIN PARTIE MENU ***/
 
 
-/* A MODIFIER APRÈS */
-/* Burger Menu */
+
+/*** PARTIE BURGER MENU ***/
 .burger {
     display: none;
     cursor: pointer;
@@ -228,63 +307,35 @@ nav ul ul li a {
 .burgerShut .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
-/* Fin Burger Menu */
+/*** FIN PARTIE BURGER ***/
 
 
 
-#homepage{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+/*** PARTIE FLÈCHE QUI PERMET UN SCROLL DOWN ***/
+/* Pour créer et positionner la flèche du "scroll down" */
+#ArrowBottom{
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    border-right: 1px var(--color-white-black) solid;
+    border-bottom: 1px var(--color-white-black) solid;
+    position: absolute; 
+    left: 48vw;
+    bottom: 10vh;
 }
 
-#togglebutton{
-    width: 5vw;
-    height: 30vh;
-    position: fixed;
-    right: 0;
-    bottom: 35vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+/* Effet hover de la flèche */
+#ArrowBottom:hover{
+    border-right: 3px var(--color-white-black) solid;
+    border-bottom: 3px var(--color-white-black) solid;
 }
+/*** FIN PARTIE FLÈCHE QUI PERMET UN SCROLL DOWN ***/
 
-#agence{
-    width: 55vw;
-    height: 85vh;
-    /* background-color: red; */
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-#concept{
-    width: 55vw;
-    height: 85vh;
-    /* background-color: rgb(181, 201, 0); */
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
-#team{
-    width: 55vw;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 5%;
-    padding-top: 10%;
-    /* A mettre pour voir la zone "Team" */
-    /* background-color: pink; */
-}
 
-#header-team{
-width: 100%;
-}
-
+/*** PARTIE "L'ÉQUIPE" ***/
 /* Pour créer des box de même taille */
 .box{
     width: 50%;
@@ -301,12 +352,11 @@ img{
     display: block;
 }
 
-#team p{
-    font-size: 0.85em;
-    text-align: center;
-    font-style: italic;  
+#header-team{
+    width: 100%;
 }
 
+/* Mise en forme de la box citation dans l'équipe */
 .texte_team{
     height: 80%;
     display: flex;
@@ -314,12 +364,21 @@ img{
     justify-content: center; /* alignement vertical */
 }
 
+/* Mise en forme du texte citation dans l'équipe */
+.texte_team p{
+    font-size: 0.85em;
+    text-align: center;
+    font-style: italic;  
+}
+
+/* Permet d'inverser les box "texte" et "photo" sur smartphone */
 .box-reverse{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
+/* Partie qui englobe .membre (nom, prénom et fonction) et .linkedinbox */
 .box_header{
     display: flex;
     flex-direction: row;
@@ -328,6 +387,7 @@ img{
     background-color: var(--color-black-white);
     color: var(--color-white-black);}
 
+/* Mise en forme de la box Linkedin */
 .linkedinbox{
     width: 20%;
     background-color: #25FD02;
@@ -335,8 +395,10 @@ img{
     flex-direction: column; /* direction d'affichage verticale */
     justify-content: center; /* alignement vertical */
     font-size: 1.5em;
+    text-align: center;
 }
 
+/* Mise en forme du nom / prénom à droite */
 .membre{
     width: 75%;
     display: flex; /* contexte sur le parent */
@@ -345,37 +407,19 @@ img{
     padding-left: 5%;
 }
 
+/* Mise en forme du nom / prénom à gauche*/
 .membre-left{
     padding-right: 5%;
     padding-left: 0;
     text-align: right;
 }
 
-
-
 /* Pour définir le padding de la zone "description" */ 
 .texte p{
     padding: 10%;;
 }
+/*** FIN PARTIE L'ÉQUIPE ***/
 
-/* Pour créer et positionner la flèche du "scroll down" */
-#ArrowBottom{
-    width: 30px;
-    height: 30px;
-    transform: rotate(45deg);
-    border-left: none;
-    border-top: none;
-    border-right: 1px var(--color-white-black) solid;
-    border-bottom: 1px var(--color-white-black) solid;
-    position: absolute; 
-    left: 46vw;
-    bottom: 10vh;
-}
-
-#ArrowBottom:hover{
-    border-right: 3px var(--color-white-black) solid;
-    border-bottom: 3px var(--color-white-black) solid;
-}
 
 
 /* Pour changer un bouton Checkbox en toggle button */
@@ -385,7 +429,8 @@ input[type=checkbox]{
     visibility: hidden;
 }
 
-label {
+/* label[for="switch"] permet de cibler précisement le label du switch grâce à son "for=" */
+label[for="switch"]{
 	cursor: pointer;
     text-indent: -9999px;
     top: 0;
@@ -398,7 +443,7 @@ label {
     position: relative;
 }
 
-label:after {
+label[for="switch"]:after {
 	content: '';
     position: absolute;
     top: 0;
@@ -411,21 +456,21 @@ label:after {
     transform: scale(0.7);
 }
 
-input:checked + label {
+input:checked + label[for="switch"] {
     background: var(--color-white-black);
 }
 
-input:checked + label:after {
+input:checked + label[for="switch"]:after {
 	top: 20px;
 	transform: scale(0.7);
 }
 
-label:active:after {
+label[for="switch"]:active:after {
     width: 45px;
 }
 
 
-
+/*** PARTIE BOUTONS DE COULEURS ***/
 /* Pour changer la forme d'un bouton */
 .boutoncouleur{
     height: 15px;
@@ -453,9 +498,11 @@ label:active:after {
 #yellowbutton:hover{
     background-color: #FFFB28;
 }
+/*** FIN PARTIE BOUTONS DE COULEURS ***/
 
 
-/* STYLE DU FORMULAIRE */
+
+/*** PARTIE FORMULAIRE ***/
 #formulaire{
     width: 25vw;
     height: 85vh;
@@ -530,29 +577,11 @@ textarea::placeholder, input::placeholder {
     flex: none;
     right: 10%;
 }
+/*** FIN PARTIE FORMULAIRE ***/
 
-/* Pour changer la couleur de l'effet "typed" */
-#typed{
-    color: #00FF0C;
-}
 
-footer{
-    width: 65vw;
-    height: 15vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-footer p{
-    font-size: 0.75em;
-}
-
-footer h6 {
-    font-size: 1em;
-    text-align: center;
-}
-
+/*** PARTIE FOOTER ***/
+/* Créer une box à gauche */
 #texte_footer_left{
     height: 100%;
     width: 34%;
@@ -561,6 +590,12 @@ footer h6 {
     padding-left: 8%;
 }
 
+/* Définir le style du texte de la box de gauche */
+footer p{
+    font-size: 0.75em;
+}
+
+/* Créer une box pour la flèche "scroll top" */
 #ArrowBox{
     height: 100%;
     width: 8%;
@@ -570,6 +605,7 @@ footer h6 {
     align-items: center;
 }
 
+/* Créer une flèche "scroll top" */
 #ArrowTop {
     width: 20px;
     height: 20px;
@@ -585,19 +621,30 @@ footer h6 {
     background-color: #25FD02;
 }
 
+/* Créer une box à droite */
 #texte_footer_right{
     height: 100%;
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
+
+/* Définir le style du texte de la box de droite */
+footer h6 {
+    font-size: 1em;
+    text-align: center;
+}
+/*** FIN PARTIE FOOTER ***/
+
 
 
 /**** PARTIE RESPONSIVE ****/
 /* SMARTPHONES */
-@media screen and (max-width: 768px){
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 768px)
+  and (-webkit-min-device-pixel-ratio: 2) {
     #agence, #concept, #team, #formulaire {width: 100vw; height: auto; order:1;}
     header{z-index: 2;}
     footer {width: 100vw; order: 3; margin-top: 10vh;}
@@ -614,8 +661,8 @@ footer h6 {
     .box-reverse{flex-direction: column-reverse;} /* Inverse le texte et la photo des box */
     /* TOGGLE BUTTON */
     #togglebutton{width: 15vw; height: 10vh; right: 25vw; top: 0; flex-direction: row; z-index: 3;}
-    label {width: 40px; height: 20px;}
-    input:checked + label:after {top: 0; left: 20px;}
+    label[for="switch"] {width: 40px; height: 20px;}
+    input:checked + label[for="switch"]:after {top: 0; left: 20px;}
     /* AFFICHER UN LIEN SUPPLÉMENTAIRE DANS LA NAV */
     #add-formulaire{display: inherit;}
     /* DROP DOWN RESEAUX */

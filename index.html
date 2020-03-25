@@ -76,13 +76,17 @@
 
         <form action="">
             <h3>Nous contacter</h3>
-            <!-- rajouter <label for="name"></label> pour l'accessibilité-->
+
+            <label for="name"></label>
             <input type="text" id="name" name="user_name" placeholder="Prénom" required>
           
+            <label for="mail"></label>
             <input type="email" id="mail" name="user_email" placeholder="Email" required>
    
+            <label for="subject"></label>
             <input type="text" id="subject" name="user_subject" placeholder="Sujet (ex: Création de site web)" required>
 
+            <label for="msg"></label>
             <textarea id="msg" name="user_message" placeholder="Votre demande" required></textarea>
            
             <div class="button">
@@ -108,11 +112,11 @@
         </div>
         
         <!-- BOX SYLVIE -->
-        <div class="box">
+        <div class="box"> <!-- Partie photo -->
             <img src="sylvie.jpg" alt="">
         </div>
 
-        <div class="box texte">
+        <div class="box texte"> <!-- Partie texte -->
             <div class="box_header">
                 <div class="linkedinbox">
                     <p class="linkedin"><a href="https://www.linkedin.com/in/sylvie-lu/">in</a></p>
@@ -127,9 +131,9 @@
             </div>
         </div>
 
-        <!-- BOX ARTHURE -->
-        <div class="box-reverse">
-            <div class="box texte">
+        <!-- BOX ARTHUR -->
+        <div class="box-reverse"> <!-- La classe "reverse" permet d'inverser les box "texte" et "photo" sur smartphone -->
+            <div class="box texte"> <!-- Partie texte -->
                 <div class="box_header">
                     <div class="membre membre-left">
                         <h4>Arthur GUEZ</h4>
@@ -143,18 +147,18 @@
                     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box"> <!-- Partie photo -->
                 <img src="arthur.jpg" alt="">
             </div>
         </div>
 
 
         <!-- BOX LUCAS -->
-        <div class="box">
+        <div class="box"> <!-- Partie photo -->
             <img src="lucas.jpg" alt="">
         </div>
 
-        <div class="box texte">
+        <div class="box texte"> <!-- Partie texte -->
             <div class="box_header">
                 <div class="linkedinbox">
                     <p class="linkedin"><a href="https://www.linkedin.com/in/beneston-lucas/">in</a></p>
@@ -170,8 +174,8 @@
         </div>
 
         <!-- BOX LEO -->
-        <div class="box-reverse">
-            <div class="box texte">
+        <div class="box-reverse">  <!-- La classe "reverse" permet d'inverser les box "texte" et "photo" sur smartphone -->
+            <div class="box texte"> <!-- Partie texte -->
                 <div class="box_header">
                     <div class="membre membre-left">
                         <h4>Léonardo KABONGO</h4>
@@ -185,7 +189,7 @@
                     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="box"> <!-- Partie photo -->
                 <img src="leo.jpg" alt="">
             </div>
         </div>
@@ -206,18 +210,7 @@
         </div>
     </footer>
 
-    <!-- SWITCH MODE DARK & LIGHT -->
-    <script src="toggle.js"></script>
-
-    <!-- ANIMATION DU TEXTE "D'ACCUEIL" -->
-    <script>
-    var typed = new Typed('#typed', {
-        strings: ["le contenu.", "l'essentiel.", "le style bro'.", "git push"],
-        typeSpeed : 50,
-        backSpeed : 50,
-        loop: true,
-        showCursor: true
-    })
-    </script>
+    <!-- JAVASCRIPT ANIMATION TEXTE <h1> / SWITCH MODE DARK & LIGHT / BURGER -->
+    <script src="animation.js"></script>
 </body>
 </html>
