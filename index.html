@@ -6,45 +6,39 @@
     <link rel="stylesheet" href="style.css">
     <title>Contrast Agency</title>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <script>  
-        /* Fonction pour changer la couleur des éléments */
-        function changeColor(color) { 
-            document.getElementById('typed').style.color= color; 
-        }
-    </script>
 </head>
 
 <body>
     <!-- SECTION "BARRE DE NAVIGATION" -->
     <header>
         <section id="logo">
-            <h1><a href="#homepage">Contrast.</a></h1>
+            <h1><a href="#homepage">Contrast<span class="textChange">.</span></a></h1>
         </section>
         <nav>
-            <ul class="nav-links">
-                <li><a href="#agence">L'agence</a></li>
-                <li><a href="#concept">Le concept</a></li>
-                <li><a href="#team">L'équipe</a></li>
-                <li id="add-formulaire"><a href="#formulaire">Nous contacter</a></li>
-                <li><a href="#reseaux">Nos réseaux</a>
+            <ul class="nav-links borderChange">
+                <li><a href="#agence" class="textHoveredChange">L'agence</a></li>
+                <li><a href="#concept" class="textHoveredChange">Le concept</a></li>
+                <li><a href="#team" class="textHoveredChange">L'équipe</a></li>
+                <li id="add-formulaire"><a href="#formulaire" class="textHoveredChange">Nous contacter</a></li>
+                <li><a href="#reseaux" class="textHoveredChange">Nos réseaux</a>
                     <ul>
-                        <li><a href="https://www.facebook.com/"  target="_blank">Facebook</a></li>
-                        <li><a href="http://linkedin.com/" target="_blank">Linkedin</a></li>
-                        <li><a href="https://github.com/" target="_blank">Github</a></li>
+                        <li><a href="https://www.facebook.com/"  target="_blank" class="textHoveredChange">Facebook</a></li>
+                        <li><a href="http://linkedin.com/" target="_blank" class="textHoveredChange">Linkedin</a></li>
+                        <li><a href="https://github.com/" target="_blank" class="textHoveredChange">Github</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+                <div class="line1 backgroundChange"></div>
+                <div class="line2 backgroundChange"></div>
+                <div class="line3 backgroundChange"></div>
             </div>
         </nav>       
     </header>
 
     <!-- SECTION "PAGE D'ACCUEIL" -->
     <section id="homepage">
-        <h2>Pas de superflu... <br /> juste <span id="typed"></span></h2>
+        <h2>Pas de superflu... <br /> juste <span id="typed" class="textChange"></span></h2>
         <a href="#agence" >
             <div id="ArrowBottom"></div>
         </a>
@@ -58,15 +52,15 @@
         <label for="switch"></label>
 
         <!-- Boutons pour changer la couleur -->
-        <button class="boutoncouleur" id="greenbutton" onclick = "changeColor('#00FF0C');"></button> 
-        <button class="boutoncouleur" id="pinkbutton" onclick = "changeColor('#FB28FF');"></button>
-        <button class="boutoncouleur" id="yellowbutton" onclick = "changeColor('yellow');"></button> 
-        <button class="boutoncouleur" id="bluebutton" onclick = "changeColor('#28FFFB');"></button>
+        <button class="boutoncouleur toGreen" id="greenbutton"></button> 
+        <button class="boutoncouleur toPink" id="pinkbutton"></button>
+        <button class="boutoncouleur toYellow" id="yellowbutton"></button> 
+        <button class="boutoncouleur toBlue" id="bluebutton" ></button>
     </section>
 
     <!-- SECTION "L'AGENCE" -->
     <section id="agence">
-        <h3>L'agence</h3>
+        <h3 class="borderChange">L'agence</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex sint fugit quos ipsam architecto alias provident numquam deleniti enim vel quidem natus totam voluptatibus sapiente dolorem sed quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex sint fugit quos ipsam architect numquam deleniti enim vel quidem natus totam voluptatibus sapiente dolorem sed quasi. </p><br>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex sint fugit quos ipsam architecto alias provident numquam deleniti enim vel quidem natus totam voluptatibus sapiente dolorem sed quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex sint fugit quos ipsam arcenim vel quidem natus totam voluptatibus sapiente dolorem sed quasi. </p>
     </section>
@@ -75,7 +69,7 @@
     <aside id="formulaire">
 
         <form action="">
-            <h3>Nous contacter</h3>
+            <h3 class="borderChange">Nous contacter</h3>
 
             <label for="name"></label>
             <input type="text" id="name" name="user_name" placeholder="Prénom" required>
@@ -93,14 +87,13 @@
               <button type="submit">Envoyer</button>
             </div>
 
-            <div id="barre"></div>
+            <div class="barre backgroundChange"></div>
         </form>
-        
     </aside>
 
     <!-- SECTION "LE CONCEPT" -->
     <section id="concept">
-        <h3>Le concept</h3>
+        <h3 class ="borderChange">Le concept</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex sint fugit quos ipsam architecto alias provident numquam deleniti enim vel quidem natus totam voluptatibus sapiente dolorem sed quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex sint fugit quos ipsam architect numquam deleniti enim vel quidem natus totam voluptatibus sapiente dolorem sed quasi. </p><br>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex sint fugit quos ipsam architecto alias provident numquam deleniti enim vel quidem natus totam voluptatibus sapiente dolorem sed quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ex sint fugit quos ipsam arcenim vel quidem natus totam voluptatibus sapiente dolorem sed quasi. </p>
     </section>
@@ -108,17 +101,17 @@
     <!-- SECTION "L'ÉQUIPE" -->
     <section id="team">    
         <div id="header-team">
-            <h3>L'équipe</h3>
+            <h3 class="borderChange">L'équipe</h3>
         </div>
         
         <!-- BOX SYLVIE -->
         <div class="box"> <!-- Partie photo -->
-            <img src="sylvie.jpg" alt="">
+            <img src="sylvie.jpg" alt="Une photo de Sylvie">
         </div>
 
         <div class="box texte"> <!-- Partie texte -->
             <div class="box_header">
-                <div class="linkedinbox">
+                <div class="linkedinbox backgroundChange">
                     <p class="linkedin"><a href="https://www.linkedin.com/in/sylvie-lu/">in</a></p>
                 </div>
                 <div class="membre">
@@ -139,7 +132,7 @@
                         <h4>Arthur GUEZ</h4>
                         <h5>Développeur Full-Stack</h5>
                     </div>
-                    <div class="linkedinbox">
+                    <div class="linkedinbox backgroundChange">
                         <p class="linkedin"><a href="https://www.linkedin.com/in/arthurguez/">in</a></p>
                     </div>
                 </div>
@@ -148,19 +141,19 @@
                 </div>
             </div>
             <div class="box"> <!-- Partie photo -->
-                <img src="arthur.jpg" alt="">
+                <img src="arthur.jpg" alt="Une photo d'Arthur">
             </div>
         </div>
 
 
         <!-- BOX LUCAS -->
         <div class="box"> <!-- Partie photo -->
-            <img src="lucas.jpg" alt="">
+            <img src="lucas.jpg" alt="Une photo de Lucas">
         </div>
 
         <div class="box texte"> <!-- Partie texte -->
             <div class="box_header">
-                <div class="linkedinbox">
+                <div class="linkedinbox backgroundChange">
                     <p class="linkedin"><a href="https://www.linkedin.com/in/beneston-lucas/">in</a></p>
                 </div>
                 <div class="membre">
@@ -181,7 +174,7 @@
                         <h4>Léonardo KABONGO</h4>
                         <h5>Content Creator / Back-End</h5>
                     </div>
-                    <div class="linkedinbox">
+                    <div class="linkedinbox backgroundChange">
                         <p class="linkedin"><a href="https://www.linkedin.com/in/leonardo-antonio-maundo-kabongo-0a9141182/">in</a></p>
                     </div>
                 </div>
@@ -190,7 +183,7 @@
                 </div>
             </div>
             <div class="box"> <!-- Partie photo -->
-                <img src="leo.jpg" alt="">
+                <img src="leo.jpg" alt="Une photo beau gosse de Léo">
             </div>
         </div>
     </section>
@@ -200,9 +193,9 @@
         <div id="texte_footer_left">
             <p>21 rue de la Vanne<br>92120 Montrouge<br>Tel: 01 44 43 11 00</p>
         </div>
-        <div id="ArrowBox">
+        <div id="ArrowBox backgroundChange">
             <a href="#homepage">
-                <div id="ArrowTop"></div>
+                <div id="ArrowTop backgroundChange"></div>
             </a>
         </div>
         <div id="texte_footer_right">

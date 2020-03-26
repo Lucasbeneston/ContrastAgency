@@ -68,3 +68,46 @@ const navSlide = () => {
 
 navSlide();
 // FIN SCRIPT BURGER 
+
+
+// SCRIPT BOUTONS COULEURS
+const iChangeColors = () => {
+    
+    // Sélectionnent les boutons switch (un par couleur) et activent setColor au clic
+    document.querySelector('.toGreen').addEventListener('click', () => {
+        setColor('#00FF0C')
+    });
+    document.querySelector('.toPink').addEventListener('click', () => {
+        setColor('#FB28FF')
+    });
+    document.querySelector('.toYellow').addEventListener('click', () => {
+        setColor('#fac51c')
+    });
+    document.querySelector('.toBlue').addEventListener('click', () => {
+        setColor('#28FFFB')
+    });
+
+    // Sélectionne et modifie la couleur de tous les background, textes et bordures
+    let setColor = (color) => {
+        document.querySelectorAll('.backgroundChange').forEach(function (elem) {
+            elem.style.backgroundColor = color;
+        });
+        document.querySelectorAll('.borderChange').forEach(function (elem) {
+            elem.style.borderColor = color;
+        });
+        document.querySelectorAll('.textChange').forEach(function (elem) {
+            elem.style.color = color;
+        });
+        document.querySelectorAll('.textHoveredChange').forEach(function (elem) {
+            elem.addEventListener('mouseover', function() {
+                this.style.color = color;
+            });
+            elem.addEventListener('mouseout', function() {
+                this.style.color = '';
+            });
+        })
+    };
+};
+
+iChangeColors();
+// FIN SCRIPT BOUTONS COULEURS
