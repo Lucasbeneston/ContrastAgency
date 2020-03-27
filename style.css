@@ -15,8 +15,6 @@ html[data-theme='light'] {
 }
 /*** FIN PARTIE SWITCH DU THÈME + VARIABLES DES COULEURS ***/
 
-
-
 /*** PERMET DE DÉFINIR DES CARACTÉRISTIQUES GÉNÉRALES POUR LE BODY ***/
 body{
     font-family: Roboto, sans-serif;
@@ -225,7 +223,6 @@ nav ul ul {
 nav ul li:hover > ul {
     display: list-item;
 }
-
 /* Dropdown */
 nav ul ul li {
     width: auto;
@@ -528,7 +525,9 @@ input{
     margin: 0;
     outline: none;
     border: none;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box; 
+            box-sizing: border-box;
     padding-left: 2%;
     z-index: 2;
     background-color: var(--color-white-black);
@@ -538,7 +537,9 @@ input{
 textarea{
     width: 90%;
     height: 20%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+       -moz-box-sizing: border-box; 
+            box-sizing: border-box;
     margin: 0;
     outline: none;
     border: none;
@@ -567,7 +568,7 @@ textarea::placeholder, input::placeholder {
 }
 
 /* Barre de décoration du formulaire */
-#barre{
+.barre{
     height: 90%;
     width: 15%;
     background-color: #00FF0C;
@@ -595,7 +596,7 @@ footer p{
 }
 
 /* Créer une box pour la flèche "scroll top" */
-#ArrowBox{
+.ArrowBox{
     height: 100%;
     width: 8%;
     background-color: #25FD02;
@@ -605,7 +606,7 @@ footer p{
 }
 
 /* Créer une flèche "scroll top" */
-#ArrowTop {
+.ArrowTop {
     width: 20px;
     height: 20px;
     transform: rotate(45deg);
@@ -700,7 +701,7 @@ footer h6 {
     
     .box-reverse{
         flex-direction: column-reverse;
-    }
+    } 
 
     /* TOGGLE BUTTON */
     #togglebutton{
@@ -741,7 +742,7 @@ footer h6 {
     }
 
     /* RENDRE INVISIBLE DES ÉLÉMENTS */
-    .boutoncouleur, #barre{
+    .boutoncouleur, .barre{
         display: none;
     }
 
@@ -769,8 +770,6 @@ footer h6 {
         margin-bottom: 5%;
     }
 }
-
-
 
 @media print {
     body {

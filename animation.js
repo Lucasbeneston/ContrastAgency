@@ -58,7 +58,6 @@ const navSlide = () => {
             } else {
                 link.style.animation = `navLinkFadeIn 0.5s ease forwards ${index / 7 + 0.3}s`;
             }
-            
         });
 
         // Animation burger menu
@@ -69,8 +68,8 @@ const navSlide = () => {
 navSlide();
 // FIN SCRIPT BURGER 
 
-
 // SCRIPT BOUTONS COULEURS
+
 const iChangeColors = () => {
     
     // Sélectionnent les boutons switch (un par couleur) et activent setColor au clic
